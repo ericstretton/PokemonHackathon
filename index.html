@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Pokemon Selection</a>
-        <a href="pages/battle.html">Battle Page</a>
+    <nav class="navbar">
+        <a href="/index.html">Pokemon Selection</a>
+        <a href="/pages/battle.html">Battle Page</a>
     </nav>
 
 
 
-    <div onclick="pickPokemon(this)" >
-        <a href="/pages/battle.html">Pichu</a>
+    <div class="userSelect" onclick="pickPokemon(this)">
+        <h1>Pichu</h1>
+        <img id="pichu" src="https://www.pngkit.com/png/full/65-654006_pichu-deviantart-pichu-pokemon.png" alt="pichu_battle_facing">
     </div>
-    <div onclick="pickPokemon(this)" >
-        <a href="/pages/battle.html">Mew</a>
+    <div class="userSelect" onclick="pickPokemon(this)">
+        <h1>Mew</h1>
+        <img src="https://www.pngfind.com/pngs/m/684-6847916_pokemon-mew-png-transparent-png.png" alt="mew_battle_facing">
     </div>
-    <div onclick="pickPokemon(this)" >
-        <a href="/pages/battle.html">Charmander</a>
+    <div class="userSelect" onclick="pickPokemon(this)">
+        <h1>Charmander</h1>
+        <img src="https://archives.bulbagarden.net/media/upload/7/73/004Charmander.png" alt="charmander_battle_facing">
     </div>
 </body>
 </html> 

@@ -1,0 +1,25 @@
+
+body{background-color: navy;
+    .navbar{
+        a{
+            text-decoration: none;
+            background-color: cornflowerblue;
+            color: white;
+            border: 2px white solid;
+            font-size: 20px;
+    
+        }
+    }
+    h1{
+        color: white;
+    }
+    div{
+        display: grid;
+        width: 40vw;
+        grid-template-columns: 0.5fr 1fr;
+        img{
+            width: 110px;
+            grid-column: 2;
+        }
+    }
+}
