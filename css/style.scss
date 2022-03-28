@@ -1,25 +1,52 @@
 
-body{background-color: navy;
+body{background-color: rgb(30, 30, 51);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    
     .navbar{
+        text-align: center;
         a{
             text-decoration: none;
-            background-color: cornflowerblue;
+            background-color: rgb(31, 33, 37);
             color: white;
             border: 2px white solid;
             font-size: 20px;
     
         }
     }
-    h1{
+    h1,p{
         color: white;
     }
     div{
         display: grid;
-        width: 40vw;
+        width: 32vw;
         grid-template-columns: 0.5fr 1fr;
         img{
             width: 110px;
             grid-column: 2;
         }
+        button{
+            display: none;
+        }
+        .revealButton{
+            display: initial;
+        }
+        background-image: url(https://cdn.wallpapersafari.com/88/2/MlLVcW.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+    }
+    #pichuDiv{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #mewDiv{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #charmanderDiv{
+        grid-column: 3;
+        grid-row: 2;
     }
 }
