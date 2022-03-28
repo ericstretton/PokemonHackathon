@@ -1,7 +1,16 @@
+// Get Cookie from app.js, Parse the string back into an object
+
 let value = Cookies.get("pokemonSelection");
 console.log(value);
 let pokemon = JSON.parse(value);
 
+// Function RemoveCookie is meant to remove the cookie when returning to Home Page.
+function removeCookie(){
+    Cookies.remove(`pokemonSelection`);
+    window.location.href="/index.html";
+}
+
+// Function to place information for Pichu battling.
 
 function enterPichu(pokemon){
     let newDiv = document.createElement('div');
@@ -26,6 +35,7 @@ function enterPichu(pokemon){
     document.getElementById("battler").append(newDiv);
 }
 
+// Function to place information for Mew battling.
 
 function enterMew(pokemon) {
     let div2 = document.createElement('div');
@@ -47,6 +57,8 @@ function enterMew(pokemon) {
     
     document.getElementById("battler").append(div2);
 }
+
+// Function to place information for Charmander battling.
 
 function enterCharmander(pokemon){
     let newDiv = document.createElement('div');
@@ -71,25 +83,26 @@ function enterCharmander(pokemon){
     document.getElementById("battler").append(newDiv);
 }
 
+// Loop to call function enterPichu to page
 
 for (var i=0; i<pokemon.length; i++){
     enterPichu(pokemon[i]);
 }
 console.log(enterPichu(pokemon[i]));
-
 enterPichu(pokemon);
+
+// Loop to call function enterMew to page
 
 for (var i=0; i<pokemon.length; i++){
     enterMew(pokemon[i]);
 }
 console.log(enterMew(pokemon[i]));
-
 enterMew(pokemon);
 
+// Loop to call function enterCharmander to page
 for (var i=0; i<pokemon.length; i++){
     enterCharmander(pokemon[i]);
 }
 console.log(enterCharmander(pokemon[i]));
-
 enterCharmander(pokemon);
 
