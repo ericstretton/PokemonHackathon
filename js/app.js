@@ -20,7 +20,7 @@ function pickPichu(element){
     pichuReadyForBattle();
 }
 function pichuReadyForBattle(){
-    Cookies.set("pichuChosen", JSON.stringify(pichuInfo))
+    Cookies.set("pokemonSelection", JSON.stringify(pichuInfo))
 }
 
 
@@ -41,7 +41,7 @@ function pickMew(element) {
     mewReadyForBattle();
 }
 function mewReadyForBattle() {
-    Cookies.set("mewChosen", JSON.stringify(mewInfo));
+    Cookies.set("pokemonSelection", JSON.stringify(mewInfo));
 }
 
 function pickCharmander(element){
@@ -59,7 +59,7 @@ function pickCharmander(element){
     charmanderReadyForBattle();
 }
 function charmanderReadyForBattle(){
-    Cookies.set("charmanderChosen", JSON.stringify(charmanderInfo))
+    Cookies.set("pokemonSelection", JSON.stringify(charmanderInfo))
 }
 
 var mewInfo = [];
