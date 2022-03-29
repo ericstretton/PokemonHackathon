@@ -3,12 +3,65 @@ body {
   height: 100vh;
 }
 
-.navbar a {
+body .navbar a {
   text-decoration: none;
   background-color: #0a8a0a;
   color: white;
   border: 1px white solid;
   font-size: 20px;
+}
+
+body section {
+  background-color: #024202;
+  background-image: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 98vw;
+  height: 120vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+body section div {
+  height: 50vh;
+  color: white;
+}
+
+body section div p {
+  font-size: 2em;
+}
+
+body section div h1 {
+  font-size: 3em;
+}
+
+body section #battler {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+body section #battler img {
+  width: 25vw;
+}
+
+body section #combatant {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  border: 3px solid white;
+}
+
+body section #combatant img {
+  height: 30vh;
 }
 
 section {

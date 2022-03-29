@@ -17,6 +17,7 @@ body{background-color: rgb(30, 30, 51);
     }
     h1,p{
         color: white;
+        text-align: center;
     }
     div{
         display: grid;
@@ -49,4 +50,7 @@ body{background-color: rgb(30, 30, 51);
         grid-column: 3;
         grid-row: 2;
     }
+    
+    
+    
 }

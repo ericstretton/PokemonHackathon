@@ -4,7 +4,7 @@ let value = Cookies.get("pokemonSelection");
 console.log(value);
 let pokemon = JSON.parse(value);
 
-// Function RemoveCookie is meant to remove the cookie when returning to Home Page.
+// Function RemoveCookie is meant to remove the cookie when user has fled from battle.
 function removeCookie(){
     Cookies.remove(`pokemonSelection`);
     window.location.href="/index.html";
@@ -83,6 +83,38 @@ function enterCharmander(pokemon){
     document.getElementById("battler").append(newDiv);
 }
 
+function attack() {
+    let move = opponentCurrentHeatlh - attackDamage;
+    if (opponentCurrentHeatlh <= 0) {
+        alert("you have won");
+    } else if (userMaxHealth <= 0) {
+        alert ('Youre a loser');
+    } for (var i=0; i<move.length; i++){
+        attack(move);
+    }
+}
+
+let attackDamage = 15;
+let userMaxHealth = 50;
+var opponentCurrentHeatlh = 125;
+
+
+let element = document.getElementById("attack");
+element.onclick = function(attack){
+    console.log(userCurrentHealth);
+}
+attack();
+
+
+
+
+
+
+
+
+
+
+
 // Loop to call function enterPichu to page
 
 for (var i=0; i<pokemon.length; i++){
@@ -105,4 +137,3 @@ for (var i=0; i<pokemon.length; i++){
 }
 console.log(enterCharmander(pokemon[i]));
 enterCharmander(pokemon);
-

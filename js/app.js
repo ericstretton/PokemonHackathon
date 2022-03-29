@@ -1,3 +1,4 @@
+// Function to make the buttons to choose your pokemon appear
 function appear(element){
     let buttons = element.querySelectorAll('button');
     for (var i=0; i<buttons.length; i++){
@@ -5,6 +6,7 @@ function appear(element){
     }
 }
 
+// 
 function pickPichu(element){
     let parent = element.parentElement;
     let imgSrc = parent.querySelector("img").getAttribute("src");
