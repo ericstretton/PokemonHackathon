@@ -83,29 +83,34 @@ function enterCharmander(pokemon){
     document.getElementById("battler").append(newDiv);
 }
 
-function attack() {
-    let move = opponentCurrentHeatlh - attackDamage;
-    if (opponentCurrentHeatlh <= 0) {
-        alert("you have won");
-    } else if (userMaxHealth <= 0) {
-        alert ('Youre a loser');
-    } for (var i=0; i<move.length; i++){
-        attack(move);
+// Setting variables for attack event function and attaching them to elements
+let attack = document.querySelector('#attack');
+// let healthBar = document.getElementById('healthbar');
+// let healthbar2 = document.getElementById('healthbar2');
+
+// Containing the variables used in the event function for attacking
+let damage = 15;
+let userMaxHealth = 100;
+let hp = userMaxHealth;
+let opponentMaxHealth = 100;
+let opponentHp = opponentMaxHealth;
+
+// Attached an event listener to an element ... containing a local function that uses the condtionals to do damamge and display result
+attack.addEventListener(`click`, function () {
+    if (hp > 0) {
+        hp = hp - damage;
+        
+    } if (hp <= 0) {
+        
+        alert ("You both lose");
+    } if (opponentHp > 0) {
+        opponentHp = opponentHp - damage;
+        
+        
+    } if (opponentHp <= 0) {
+        alert ("You both lose");
     }
-}
-
-let attackDamage = 15;
-let userMaxHealth = 50;
-var opponentCurrentHeatlh = 125;
-
-
-let element = document.getElementById("attack");
-element.onclick = function(attack){
-    console.log(userCurrentHealth);
-}
-attack();
-
-
+})
 
 
 
